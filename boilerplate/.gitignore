@@ -1,0 +1,7 @@
+.idea
+node_modules
+config
+data
+files
+.env
+seed/test.jpg

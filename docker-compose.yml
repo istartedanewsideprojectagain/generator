@@ -1,0 +1,8 @@
+version: "3.7"
+services:
+  mongo-db:
+    image: mongo
+    volumes:
+      - ./volumes/mongodb-data/main:/data/db
+    ports:
+      - "27017:27017"

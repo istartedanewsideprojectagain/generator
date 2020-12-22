@@ -1,0 +1,28 @@
+const mongoose = require('mongoose');
+const fs = require('fs-extra');
+
+const { Schema } = mongoose;
+const { ObjectId } = Schema;
+const schema = new Schema({
+{% for field in fields %}
+{{ field.name }}:{
+    {% if field.required %}
+    "required": "{{ field.required }}",
+    {% endif %}
+    {% if field.type %}
+    "type": "{{ field.type }}",
+    {% endif %}
+    {% if field.unique %}
+    "unique": "{{ field.unique }}",
+    {% endif %}
+    {% if field.text %}
+    "text": "{{ field.text }}",
+    {% endif %}
+    {% if field.index %}
+    "index": "{{ field.index }}",
+    {% endif %}
+},
+{% endfor %}
+});
+module.exports = mongoose.model('{{ schemaName }}', schema);
+

@@ -1,0 +1,40 @@
+{
+    "data" : [
+        {
+            "project": {
+                "fields" : [
+                    {
+                      "name" : "title",
+                      "type": "String",
+                      "required": "The title is required",
+                      "unique": "true",
+                      "text": "true",
+                      "index": "true"
+                    },
+                    {
+                        "name" : "slug",
+                        "type": "String",
+                        "default": ""
+                    }
+                ],      
+                "actions" : ["getOne","getAll","create","delete"]
+            }
+        },
+        {
+            "devlog": {
+                "fields" :[
+                    {
+                        "name": "name",
+                        "type": "string",
+                        "required": "The name is required"
+                    },
+                    {
+                        "name": "content",
+                        "type": "string"
+                    }
+                ],
+                "actions" : ["getOne","getAll","create","delete"]
+            }
+        }
+    ]
+}

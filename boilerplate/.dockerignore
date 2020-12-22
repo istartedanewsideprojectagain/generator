@@ -1,0 +1,13 @@
+.git
+.idea
+
+/unused/*
+Dockerfile
+.DS_Store
+.gitignore
+README.md
+env.*
+.env
+node_modules
+
+data

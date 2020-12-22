@@ -1,0 +1,36 @@
+{
+  "name": "devpot-backend",
+  "version": "1.0.0",
+  "description": "Backend REST API for DevpPot application, in this version is only for the first iteration of the project. ",
+  "main": "app.js",
+  "dependencies": {
+    "axios": "^0.19.0",
+    "axios-file": "^1.0.17",
+    "body-parser": "^1.18.3",
+    "cookie-parser": "^1.4.4",
+    "cors": "^2.8.5",
+    "dotenv": "^8.0.0",
+    "express": "^4.16.4",
+    "fakegoose": "0.0.3",
+    "form-data": "^3.0.0",
+    "fs-extra": "^8.1.0",
+    "http-errors": "^1.7.2",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.4.16",
+    "mongoose-dummy": "^1.0.8",
+    "mongoose-immutable": "0.0.2",
+    "mongoose-slug-generator": "^1.0.4"
+  },
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.17.2"
+  },
+  "scripts": {
+    "test": "mocha --recursive --retries 2 --exit",
+    "start": "nodemon",
+    "seed": "node ./seed/seed.js 12 20 20"
+  },
+  "author": "didier.page@heig-vd.ch",
+  "license": "ISC"
+}
